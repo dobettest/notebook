@@ -1,5 +1,10 @@
 module.exports = [
     {
+        title:'介绍',
+        collapsable:true,
+        path:'/framework/'
+    },
+    {
         title: 'Vue.js',
         collapsable: true,
         children: [
@@ -60,5 +65,14 @@ module.exports = [
                 collapsable: true
             }
         ]
+    },{
+        title:'Angularjs',
+        collapsable:true,
+        children:[]
+    },
+    {
+        title:'React',
+        collapsable:true,
+        children:[]
     }
 ]

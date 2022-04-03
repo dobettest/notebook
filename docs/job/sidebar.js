@@ -1,0 +1,16 @@
+module.exports=[{
+    title:'职场',
+    collapsable:false,
+    children:[
+        {
+            title:'职业目标',
+            path:'/job/design',
+            collapsable:true
+        },
+        {
+            title:'职场管理',
+            path:'/job/manage',
+            collapsable:true
+        }
+    ]
+}]

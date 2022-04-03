@@ -19,34 +19,19 @@ module.exports = [
   },
   {
     text: '模块',
-    items: [
-      {
-        text: 'NodeJs',link:'/modules/nodejs/'
-      }
-    ]
+    link: '/modules/'
   },
   {
     text: '常用框架',
-    items: [
-      { text: 'Vue.js', link: '/framework/vuejs/' },
-      { text: 'nuxt.js', link: '/framework/nuxtjs/' },
-    ]
+    link: '/framework/'
   },
   {
     text: '开发到发布',
-    items: [
-      { text: '打包与构建', link: '/build/webpack5/' },
-      { text: '源码管理', link: '/build/git/' },
-      { text: '自动化构建', link: '/build/jenkins/' },
-      { text: '服务部署', link: '/build/deploy/' },
-    ]
+    link: '/build/'
   },
   {
     text: '深入学习',
-    items: [
-      { text: '源码阅读与学习', link: '/in-depth-learning/source-code/' },
-      { text: '浏览器工作原理', link: '/in-depth-learning/browser/' }
-    ]
+    link: '/in-depth-learning/',
   },
   {
     text: '其它',
@@ -55,7 +40,6 @@ module.exports = [
         text: '站内',
         items: [
           { text: '关于本站', link: '/about/' },
-          { text: '产品设计', link: '/product/' },
           { text: '更新日志', link: '/history/' }
         ]
       },

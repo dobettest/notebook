@@ -161,6 +161,11 @@ module.exports = [
         collapsable: true
       },
       {
+        title:'实现Promise',
+        path:'/lang/javascript/javascript-handwritten/实现Promise',
+        collapsable:true
+      },
+      {
         title: '未完待续',
         path: '/lang/javascript/javascript-handwritten/to-be-continued',
         collapsable: true

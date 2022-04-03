@@ -44,4 +44,16 @@ function myInstanceof(instanceObject, classFunc) {
 myInstanceof([1,2,3], Array)
 ```
 
+:::tip 如何实现instanceof 判断基础数据类型
+`Symbol.hasInstance`用于判断某对象是否为某构造器的实例。因此你可以用它自定义 instanceof 操作符在某个类上的行为。
+
+```javascript
+class MyArray {
+  static [Symbol.hasInstance](instance) {
+    return Array.isArray(instance);
+  }
+}
+console.log([] instanceof MyArray); // true
+```
+:::
 （完）

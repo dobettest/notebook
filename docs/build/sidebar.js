@@ -1,5 +1,15 @@
 module.exports = [
     {
+        title:'介绍',
+        collapsable:true,
+        path:'/build/'
+    },
+    {
+        title:'开发环境搭建',
+        collapsable:true,
+        path:'/build/env'
+    },
+    {
         title: '打包与构建',
         collapsable: true,
         children: [

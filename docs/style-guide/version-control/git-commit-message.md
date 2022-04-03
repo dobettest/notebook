@@ -37,6 +37,25 @@
   <p style="text-align: center; color: #888;">（React 的提交历史）</p>
 </div>
 
+## 搭配jira项目使用
+1）分支号命名：branch_jira号，比如：branch_XXX-1234。如果是工单（IPDR）新建一个项目的任务关联，用来提测和跟踪使用。
+
+2）按照现有代码框架编码，尽量避免“造轮子”、“开口子”，遇到以下变更需要内部沟通：
+
+公共验证方法
+原有接口/方法增减参数
+底层、公共函数
+
+3）功能编码前完成单元测试
+
+4）及时commit代码，commit备注：Feature #XXXX-1234  具体描述
+
+5）国际化词条，本次新增、修改的词条，开发完成后批量提交给文档工程翻译
+
+6）代码review，涉及到如下变更需要内部代码review
+
+公共验证方法
+底层、公共函数
 ## commit 的格式
 
 每次提交，commit message 都包括三个部分：header，body 和 footer。header 有一个特殊的格式包含有 type，scope 和 subject：

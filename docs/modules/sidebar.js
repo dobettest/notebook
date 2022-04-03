@@ -1,33 +1,32 @@
-module.exports=[
+module.exports = [
     {
-        title:'nodejs',
+        title: '介绍',
         collapsable: true,
-        children:[
-            {
-                title:'commander',
-                collapsable: true,
-                path:'/modules/nodejs/commander'
-            },
-            {
-                title:'joi',
-                collapsable: true,
-                path:'/modules/nodejs/joi'
-            },
-            {
-                title:'execa',
-                collapsable: true,
-                path:'/modules/nodejs/execa'
-            },
-            {
-                title:'canvas',
-                collapsable: true,
-                path:'/modules/nodejs/canvas'
-            },
-            {
-                title:'mock',
-                collapsable: true,
-                path:'/modules/nodejs/mock'
-            }
-        ]
+        path: '/modules/'
+    },
+    {
+        title: 'commander',
+        collapsable: true,
+        path: '/modules/commander'
+    },
+    {
+        title: 'joi',
+        collapsable: true,
+        path: '/modules/joi'
+    },
+    {
+        title: 'execa',
+        collapsable: true,
+        path: '/modules/execa'
+    },
+    {
+        title: 'canvas',
+        collapsable: true,
+        path: '/modules/canvas'
+    },
+    {
+        title: 'mock',
+        collapsable: true,
+        path: '/modules/mock'
     }
 ]

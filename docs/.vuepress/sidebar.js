@@ -15,9 +15,7 @@ module.exports = {
   /*-----------模块:开发经常用上的重要模块------------- */
   '/modules':require('../modules/sidebar'),
   /* --------- 深入学习 --------- */
-  '/in-depth-learning/source-code/': require('../in-depth-learning/source-code/sidebar'),
-  '/in-depth-learning/browser': require('../in-depth-learning/browser/sidebar'),
+  '/in-depth-learning/':require('../in-depth-learning/siderbar'),
   /* --------- 其它 --------- */
-  '/product': require('../product/sidebar'),
   '/': [],
 };

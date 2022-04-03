@@ -21,15 +21,29 @@ Git 支持 https 和 git 两种传输协议，例如在 GitHub 在 clone 代码�
 下面具体介绍每一步骤：
 
 ### 本地生成 ssh 秘钥
-
-打开终端，执行 `ssh-keygen -t rsa -C "你在GitHub上使用的邮箱地址"`，如果执行成功，切换到 `~/.ssh` 目录下，此时目录应该如下所示。
-
+打开终端，执行如下命令,如果执行成功，切换到 `~/.ssh` 目录下，此时目录应该如下所示。
+```bash
+ssh-keygen -t ed25519 -C "<comment>"
+```
+目录:
 ```bash
 ├── id_rsa       # 私钥
 ├── id_rsa.pub   # 公钥
 └── known_hosts  # 记录每个你访问过的计算机的公钥(public key), 防止 DNS 攻击
 ```
-
+### 复制本地ssh密钥
+1、macOS:
+```sh
+tr -d '\n' < ~/.ssh/id_ed25519.pub | pbcopy
+```
+2、Linux (requires the xclip package):
+```
+xclip -sel clip < ~/.ssh/id_ed25519.pub
+```
+3、Git Bash on Windows:
+```
+cat ~/.ssh/id_ed25519.pub | clip
+```
 ### 添加公钥到自己的远程仓库（GitHub）
 
 复制公钥（`id_rsa.pub`）的内容，访问 GitHub，依次进入：`Settings --> SSH and GPG keys --> New SSH key`。

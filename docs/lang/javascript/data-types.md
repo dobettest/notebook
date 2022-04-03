@@ -241,6 +241,55 @@ console.log(person instanceof Person); // true
 ## 数据类型转换
 
 参考 [JavaScript 类型转换](https://www.runoob.com/js/js-type-conversion.html "JavaScript 类型转换")。
+:::info 对象转原始类型是根据什么流程运行的?
+`对象转原始类型`，会调用内置的[ToPrimitive]函数，对于该函数而言，其逻辑如下：
+
+* 1、如果Symbol.toPrimitive()方法，优先调用再返回
+* 2、调用valueOf()，如果转换为原始类型，则返回
+* 3、调用toString()，如果转换为原始类型，则返回
+* 4、如果都没有返回原始类型，会报错
+```javascript
+var obj = {
+  value: 3,
+  valueOf() {
+    return 4;
+  },
+  toString() {
+    return '5'
+  },
+  [Symbol.toPrimitive]() {
+    return 6
+  }
+}
+console.log(obj + 1); // 输出7
+```
+:::
+相等运算符（`==和!=`）使用`抽象相等比较算法`比较两个操作数。可以大致概括如下：
+
+* 如果两个操作数都是对象，则仅当两个操作数都引用同一个对象时才返回true。
+* 如果一个操作数是null，另一个操作数是undefined，则返回true。
+* 如果两个操作数是不同类型的，就会尝试在比较之前将它们转换为相同类型：
+* 当数字与字符串进行比较时，会尝试将字符串转换为数字值。
+* 如果操作数之一是Boolean，则将布尔操作数转换为1或0。
+* 如果是true，则转换为1。
+* 如果是 false，则转换为0。
+* 如果操作数之一是对象，另一个是数字或字符串，会尝试使用`对象的valueOf()和toString()方法`将对象转换为原始值。
+* 如果操作数具有相同的类型，则将它们进行如下比较：
+* String：true仅当两个操作数具有相同顺序的相同字符时才返回。
+* Number：true仅当两个操作数具有相同的值时才返回。+0并被-0视为相同的值。如果任一操作数为NaN，则返回false。
+* Boolean：true仅当操作数为两个true或两个false时才返回true。
+```javascript
+[]==false//true
+```
+## 常用运算符及其用法
+### 一元运算符
+* `delete`,你能使用 delete 删除各种各样的隐式声明， 但是被var声明的除外。如果 `delete可行`会返回true，如果不成功返回false。
+* `+`,可以将一个字符串转化为number类型
+* `void`,你可以使用void运算符指明一个超文本链接。该表达式是有效的，但是并不会在当前文档中进行加载。
+```javascript
+<a href="javascript:void(0)">Click here to do nothing</a>
+<a href="javascript:void(document.form.submit())">
+```
 
 ## 参考资料
 
